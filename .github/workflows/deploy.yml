@@ -26,11 +26,11 @@ jobs:
 
       - name: Update ENS
         uses: aquiladev/ddns-action@v0.1.1
-          with:
-            mnemonic: ${{ secrets.CONTROLLER_PRIVATE_KEY }}
-            rpc: ${{ secrets.INFURA_URL }}
-            name: ndoherty.eth
-            contentHash: ${{ steps.ipfs-deploy.outputs.hash }}
+        with:
+          mnemonic: ${{ secrets.CONTROLLER_PRIVATE_KEY }}
+          rpc: ${{ secrets.INFURA_URL }}
+          name: ndoherty.eth
+          contentHash: ${{ steps.ipfs-deploy.outputs.hash }}
 
       - name: Deploying to gh-pages branch
         uses: JamesIves/github-pages-deploy-action@4.1.5
