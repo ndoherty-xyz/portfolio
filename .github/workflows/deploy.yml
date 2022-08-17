@@ -13,15 +13,24 @@ jobs:
       - name: Installing and Building App
         run: |
           npm install
-          npm install -g ipfs-deploy
-          npm install -g @triplespeeder/ens-updater
           CI=false npm run-script build
 
-      - name: Deploying to IPFS & Updating ENS
-        run: |
-          bash scripts/ipfs-deploy.sh pinata ${{ secrets.INFURA_URL }}
-        env:
-          PRIVATE_KEY: $${{secrets.CONTROLLER_PRIVATE_KEY}}
+      - name: Deploying to IPFS
+        id: ipfs-deploy
+        uses: aquiladev/ipfs-action@v0.1.0-alpha
+        with:
+          path: ./build
+          service: pinata
+          pinataKey: ${{ secrets.PINATA_API_KEY }}
+          pinataSecret: ${{ secrets.PINATA_API_SECRET }}
+
+      - name: Update ENS
+        uses: aquiladev/ddns-action@v0.1.1
+          with:
+            mnemonic: ${{ secrets.CONTROLLER_PRIVATE_KEY }}
+            rpc: ${{ secrets.INFURA_URL }}
+            name: ndoherty.eth
+            contentHash: ${{ steps.ipfs-deploy.outputs.hash }}
 
       - name: Deploying to gh-pages branch
         uses: JamesIves/github-pages-deploy-action@4.1.5
