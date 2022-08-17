@@ -1,0 +1,30 @@
+name: Deploy to IPFS & Github Pages
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out
+        uses: actions/checkout@v2.3.1
+
+      - name: Installing and Building App
+        run: |
+          npm install
+          npm install -g ipfs-deploy
+          npm install -g @triplespeeder/ens-updater
+          CI=false npm run-script build
+
+      - name: Deploying to IPFS & Updating ENS
+        run: |
+          bash scripts/ipfs-deploy.sh pinata ${{ secrets.INFURA_URL }}
+        env:
+          PRIVATE_KEY: $${{secrets.CONTROLLER_PRIVATE_KEY}}
+
+      - name: Deploying to gh-pages branch
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: build
