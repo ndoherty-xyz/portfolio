@@ -15,14 +15,14 @@ jobs:
           npm install
           CI=false npm run-script build
 
-      - name: Deploying to IPFS (Infura)
-        id: infura_deploy_pinning
-        uses: aquiladev/ipfs-action@master
-        with:
-          path: ./build
-          service: infura
-          infuraProjectId: ${{ secrets.INFURA_PROJECT_ID }}
-          infuraProjectSecret: ${{ secrets.INFURA_PROJECT_SECRET }}
+      # - name: Deploying to IPFS (Infura)
+      #   id: infura_deploy_pinning
+      #   uses: aquiladev/ipfs-action@master
+      #   with:
+      #     path: ./build
+      #     service: infura
+      #     infuraProjectId: ${{ secrets.INFURA_PROJECT_ID }}
+      #     infuraProjectSecret: ${{ secrets.INFURA_PROJECT_SECRET }}
 
       - name: Deploying to IPFS (Pinata)
         id: pinata_deploy_pinning
