@@ -4,16 +4,20 @@ on:
     branches:
       - main
 jobs:
-  build-and-deploy:
+  backup-on-radicle:
     runs-on: ubuntu-latest
     steps:
       - name: Installing Radicle CLI and rsync
         run: |
           curl https://europe-west6-apt.pkg.dev/doc/repo-signing-key.gpg | sudo apt-key add -
           echo "deb [arch=amd64] https://europe-west6-apt.pkg.dev/projects/radicle-services radicle-cli main" | sudo tee -a /etc/apt/sources.list.d/radicle-registry.list
+          echo "Added to sources list"
           sudo apt update
+          echo "apt updated"
           sudo apt install radicle-cli
+          echo "radicle-cli installed"
           apt-get install rsync
+          echo "rsync installed"
           rad
           rsync
 
