@@ -16,7 +16,7 @@ jobs:
           echo "apt updated"
           sudo apt install radicle-cli
           echo "radicle-cli installed"
-          apt-get install rsync
+          sudo apt-get install rsync
           echo "rsync installed"
           rad
           rsync
