@@ -64,10 +64,10 @@ const Home = () => {
       <div className={`about ${aboutOpen ? 'open' : ''}`} style={{height: windowHeight}}>
         <div className='about-content'>
           <span className='about-text'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Hey there, I'm a designer and developer who is currently working at Greenwood Labs as a Frontend Engineer. I'm interested in improving the UX of DeFi and the cryptocurrency space as a whole, as well as decentralizing frontend infrastructure (this website is also hosted on IPFS).
             <br />
             <br />
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            If you have a project idea that needs some design or development work and you think I can help out (or you just want to talk) feel free to reach out to me.
           </span>
           <span className='about-close' onClick={() => setAboutOpen(false)}>Close</span>
         </div>
