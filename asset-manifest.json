@@ -1,15 +1,23 @@
 {
   "files": {
-    "main.css": "./static/css/main.2739a358.css",
-    "main.js": "./static/js/main.f2851733.js",
+    "main.css": "./static/css/main.162f0542.css",
+    "main.js": "./static/js/main.3892c507.js",
     "static/js/787.1857597f.chunk.js": "./static/js/787.1857597f.chunk.js",
+    "static/media/greenwood-1.png": "./static/media/greenwood-1.2566dad0a203d0760ef6.png",
+    "static/media/greenwood-2.png": "./static/media/greenwood-2.55e1ccc858d5fc3d53de.png",
+    "static/media/kinnegad-1.png": "./static/media/kinnegad-1.353144b2008e713af9fc.png",
+    "static/media/greenwood-3.png": "./static/media/greenwood-3.220dd8b6f345992d8ad7.png",
+    "static/media/kinnegad-2.png": "./static/media/kinnegad-2.1d0458946566e8d38c4f.png",
+    "static/media/kinnegad-3.png": "./static/media/kinnegad-3.f0d3cfc3c20ad38e87cc.png",
+    "static/media/playlist-1.png": "./static/media/playlist-1.b8aa3fba40c4fc46ded2.png",
+    "static/media/playlist-2.png": "./static/media/playlist-2.c5496e24eeae695aa228.png",
     "index.html": "./index.html",
-    "main.2739a358.css.map": "./static/css/main.2739a358.css.map",
-    "main.f2851733.js.map": "./static/js/main.f2851733.js.map",
+    "main.162f0542.css.map": "./static/css/main.162f0542.css.map",
+    "main.3892c507.js.map": "./static/js/main.3892c507.js.map",
     "787.1857597f.chunk.js.map": "./static/js/787.1857597f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2739a358.css",
-    "static/js/main.f2851733.js"
+    "static/css/main.162f0542.css",
+    "static/js/main.3892c507.js"
   ]
 }
