@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.5d934a00.css",
+    "main.css": "./static/css/main.525c4d06.css",
     "main.js": "./static/js/main.03574f83.js",
     "static/js/787.1857597f.chunk.js": "./static/js/787.1857597f.chunk.js",
     "static/media/greenwood-1.png": "./static/media/greenwood-1.2566dad0a203d0760ef6.png",
@@ -12,12 +12,12 @@
     "static/media/playlist-1.png": "./static/media/playlist-1.b8aa3fba40c4fc46ded2.png",
     "static/media/playlist-2.png": "./static/media/playlist-2.c5496e24eeae695aa228.png",
     "index.html": "./index.html",
-    "main.5d934a00.css.map": "./static/css/main.5d934a00.css.map",
+    "main.525c4d06.css.map": "./static/css/main.525c4d06.css.map",
     "main.03574f83.js.map": "./static/js/main.03574f83.js.map",
     "787.1857597f.chunk.js.map": "./static/js/787.1857597f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d934a00.css",
+    "static/css/main.525c4d06.css",
     "static/js/main.03574f83.js"
   ]
 }
