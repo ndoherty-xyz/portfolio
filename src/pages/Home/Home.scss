@@ -95,6 +95,10 @@
                 filter: invert(.5)
             }
 
+            @media (max-width: 600px) {
+                gap: 20px;
+            }
+
             &-text {
                 color: $gray;
                 font-style: normal;
@@ -105,6 +109,12 @@
                 letter-spacing: 0.02em;
                 text-transform: uppercase;
                 max-width: calc(100% - 150px);
+
+                @media (max-width: 600px) {
+                    font-size: 18px;
+                    line-height: 22px;
+                    max-width: calc(100% - 100px);
+                }
 
                 &:hover {
                     cursor: pointer;
