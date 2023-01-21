@@ -12,50 +12,45 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
-    &-top,
-    &-bottom {
+    &-top {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        margin: 40px;
+        width: calc(100% - 80px);
+
+        @media (max-width: 600px) {
+            margin: 20px;
+            width: calc(100% - 40px);
+        }
+
         display: flex;
         justify-content: space-between;
         color: $black;
-        width: 100%;
-    }
 
-    &-top {
         padding-top: 10px;
-        border-top: 1px solid $black;
-    }
+        border-top: 3px solid $black;
 
-    &-bottom {
-        padding-bottom: 10px;
-        border-bottom: 1px solid $black;
+        &>span:first-child {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 14px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
 
-        &-link {
-            position: relative;
+        &>div:last-child {
+            display: flex;
+            align-items: center;
+            gap: 15px;
 
-            &::before {
-                position: absolute;
-                content: "";
-                width: calc(100% + 4px);
-                height: calc(100% + 2px);
-                bottom: -1px;
-                left: -2px;
-                background: $red;
-                transition: transform 300ms;
-                transform: scaleX(0);
-                transform-origin: right;
-                z-index: -1;
-            }
-
-            &:hover {
+            &>*:hover {
                 cursor: pointer;
-
-                &::before {
-                    transform: scaleX(1);
-                    transform-origin: left;
-                }
+                filter: invert(.5);
             }
         }
     }
@@ -73,6 +68,7 @@
 
     &-center {
         width: 762px;
+        padding-top: 27px;
 
         @media (max-width: 900px) {
             width: 100%
@@ -84,264 +80,43 @@
         gap: 15px;
         color: $black;
 
-        &-project-info {
+
+        &-project {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0px 2px 15px;
             width: 100%;
-            border-bottom: 2px solid $black;
-
-            font-weight: 400;
-            font-size: 24px;
-            line-height: 29px;
-
-            &-title {
-                position: relative;
-
-                &::before {
-                    position: absolute;
-                    content: "";
-                    width: calc(100% + 4px);
-                    height: calc(100% + 2px);
-                    bottom: -1px;
-                    left: -2px;
-                    background: $red;
-                    transition: transform 300ms;
-                    transform: scaleX(0);
-                    transform-origin: right;
-                    z-index: -1;
-                }
-            }
-
-            &:hover {
-                cursor: pointer;
-            }
-
-            &:hover &-title {
-                &::before {
-                    transform: scaleX(1);
-                    transform-origin: left;
-                }
-            }
-        }
-
-        &-stepper {
-            display: flex;
             align-items: center;
+            justify-content: space-between;
             gap: 30px;
-            font-size: 16px;
+            padding-top: 40px;
 
-            & *:not(.arrow) {
-                padding-top: 6px;
-                font-weight: 500;
+            &>svg:first-child:hover,
+            &>svg:last-child:hover {
+                cursor: pointer;
+                filter: invert(.5)
             }
 
-            & .arrow {
-                font-weight: 700;
-                font-size: 36px;
-                line-height: 24px;
-                transition: all 100ms ease;
+            &-text {
+                color: $gray;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 28px;
+                text-align: center;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+                max-width: calc(100% - 150px);
 
                 &:hover {
                     cursor: pointer;
-                    color: $red;
-                    transform: scaleX(1.15);
+                    text-decoration: underline;
+                    color: $black;
+                }
+
+                &>span:first-child {
+                    color: $black;
+                    font-weight: 700;
                 }
             }
         }
     }
-
-}
-
-.about {
-    width: 0vw;
-    height: 100vh;
-    z-index: 50;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    background-color: #0d0d0d;
-
-    transition: width 500ms;
-    transform-origin: left;
-
-    &.open {
-        width: 100vw;
-    }
-
-    &-content {
-        width: 100vw;
-        height: 100%;
-        top: 0;
-        left: 0;
-        position: absolute;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        color: $white;
-
-        padding: 40px;
-
-        @media (max-width: 600px) {
-            padding: 20px;
-        }
-    }
-
-
-    &-text {
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 29px;
-        max-width: 50%;
-
-        @media (max-width: 900px) {
-            max-width: 100%;
-        }
-
-        @media (max-width: 600px) {
-            font-size: 20px;
-            line-height: 24px;
-        }
-    }
-
-    &-close {
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 29px;
-
-        @media (max-width: 600px) {
-            font-size: 20px;
-            line-height: 24px;
-        }
-
-        position: relative;
-        width: fit-content;
-
-        &::before {
-            position: absolute;
-            content: "";
-            width: calc(100% + 4px);
-            height: calc(100% + 2px);
-            bottom: -1px;
-            left: -2px;
-            background: $red;
-            transition: transform 300ms;
-            transform: scaleX(0);
-            transform-origin: right;
-            mix-blend-mode: lighten;
-        }
-
-        &:hover {
-            cursor: pointer;
-
-            &::before {
-                transform: scaleX(1);
-                transform-origin: left;
-            }
-        }
-    }
-
-}
-
-.contact {
-    width: 0vw;
-    height: 100vh;
-    z-index: 50;
-    position: fixed;
-    top: 0;
-    right: 0;
-    overflow: hidden;
-    background-color: #0d0d0d;
-
-    transition: width 500ms;
-    transform-origin: right;
-
-    &.open {
-        width: 100vw;
-    }
-
-    &-content {
-        width: 100vw;
-        height: 100%;
-        top: 0;
-        right: 0;
-        position: absolute;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
-        color: $white;
-
-
-        padding: 40px;
-
-        @media (max-width: 600px) {
-            padding: 20px;
-        }
-    }
-
-
-    &-text {
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 29px;
-        max-width: 50%;
-        text-align: right;
-
-        @media (max-width: 900px) {
-            max-width: 100%;
-        }
-
-        @media (max-width: 600px) {
-            font-size: 20px;
-            line-height: 24px;
-        }
-
-        & a {
-            color: $red;
-        }
-    }
-
-    &-close {
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 29px;
-
-        @media (max-width: 600px) {
-            font-size: 20px;
-            line-height: 24px;
-        }
-
-        position: relative;
-        width: fit-content;
-
-        &::before {
-            position: absolute;
-            content: "";
-            width: calc(100% + 4px);
-            height: calc(100% + 2px);
-            bottom: -1px;
-            left: -2px;
-            background: $red;
-            transition: transform 300ms;
-            transform: scaleX(0);
-            transform-origin: right;
-            mix-blend-mode: lighten;
-        }
-
-        &:hover {
-            cursor: pointer;
-
-            &::before {
-                transform: scaleX(1);
-                transform-origin: left;
-            }
-        }
-    }
-
 }

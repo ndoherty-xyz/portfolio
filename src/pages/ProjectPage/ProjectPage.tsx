@@ -1,4 +1,5 @@
 import React from 'react'
+import { GitHub, Mail, Twitter } from 'react-feather'
 import { useNavigate } from 'react-router-dom'
 import { Project } from '../../projects'
 
@@ -16,18 +17,19 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
             <div className='project-top-container'>
                 <div className='project-top-blur' />
                 <div className='project-top'>
-                    <span className='hover-fill-link' onClick={() => navigate('/')}>Back to Home</span>
-                    {project.link ? 
-                        <span className='hover-fill-link'><a href={project.link} target="_blank" rel="noreferrer">View Live</a></span> 
-                        : project.title
-                    }
+                    <span onClick={() => navigate('/')}>BACK</span>
+                    <div>
+                        <Mail size={14} strokeWidth={2.5} onClick={() => window.open('mailto:ndoherty.xyz@gmail.com', '_blank')} />
+                        <Twitter size={14} strokeWidth={2.5} onClick={() => window.open('https://twitter.com/ndoherty_xyz', '_blank')} />
+                        <GitHub size={14} strokeWidth={2.5} onClick={() => window.open('https://github.com/ndoherty-xyz', '_blank')} />
+                    </div>
                 </div>
             </div>
 
             <div className='project-content'>
                 <div className='project-header'>
                     <span className='project-title'>{project.title}</span>
-                    <span className='project-desc'>{project.year} — {project.subtitle}</span>
+                    <span className='project-desc'>{project.subtitle}, {project.year}</span>
                 </div>
             
                 <img className="project-img" src={project.headerImage} alt=""/>

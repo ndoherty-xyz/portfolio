@@ -31,7 +31,7 @@ export const projects: Project[] = [
         },
         {
             src: greenwood3,
-            text: "Mobile responsive"
+            text: "Mobile responsive design"
         }]
     },
     {
@@ -45,7 +45,7 @@ export const projects: Project[] = [
             src: kinnegad2
         }, {
             src: kinnegad3,
-            text: "Mobile responsive"
+            text: "Mobile responsive design"
         }]
     },
     {
