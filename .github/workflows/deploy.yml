@@ -24,22 +24,22 @@ jobs:
       #     infuraProjectId: ${{ secrets.INFURA_PROJECT_ID }}
       #     infuraProjectSecret: ${{ secrets.INFURA_PROJECT_SECRET }}
 
-      - name: Deploying to IPFS (Pinata)
-        id: pinata_deploy_pinning
-        uses: aquiladev/ipfs-action@master
-        with:
-          path: ./build
-          service: pinata
-          pinataKey: ${{ secrets.PINATA_API_KEY }}
-          pinataSecret: ${{ secrets.PINATA_API_SECRET }}
+      # - name: Deploying to IPFS (Pinata)
+      #  id: pinata_deploy_pinning
+      #  uses: aquiladev/ipfs-action@master
+      #  with:
+      #    path: ./build
+      #    service: pinata
+      #    pinataKey: ${{ secrets.PINATA_API_KEY }}
+      #    pinataSecret: ${{ secrets.PINATA_API_SECRET }}
 
-      - name: Update ENS
-        uses: aquiladev/ddns-action@v0.3.0
-        with:
-          mnemonic: ${{ secrets.CONTROLLER_PRIVATE_KEY }}
-          rpc: ${{ secrets.INFURA_URL }}
-          name: ndoherty.eth
-          contentHash: ${{ steps.pinata_deploy_pinning.outputs.hash }}
+      # - name: Update ENS
+      #  uses: aquiladev/ddns-action@v0.3.0
+      #  with:
+      #    mnemonic: ${{ secrets.CONTROLLER_PRIVATE_KEY }}
+      #    rpc: ${{ secrets.INFURA_URL }}
+      #    name: ndoherty.eth
+      #    contentHash: ${{ steps.pinata_deploy_pinning.outputs.hash }}
 
       - name: Deploying to gh-pages branch
         uses: JamesIves/github-pages-deploy-action@4.1.5
