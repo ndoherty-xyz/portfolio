@@ -11,7 +11,7 @@ import playlist2 from './images/playlist-2.png'
 export interface Project {
     title: string;
     subtitle: string;
-    year: number;
+    year: string;
     slug: string;
     headerImage: string;
     link?: string;
@@ -21,8 +21,8 @@ export interface Project {
 export const projects: Project[] = [
     {
         title: 'Greenwood Labs',
-        subtitle: 'Frontend Engineer & Design',
-        year: 2022,
+        subtitle: 'Frontend Engineer & Design Lead',
+        year: '2022-2023',
         slug: 'greenwood-labs',
         link: 'https://greenwood.finance',
         headerImage: greenwood1,
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     {
         title: 'Kinnegad Play Therapy',
         subtitle: 'Freelance Web Design and Development',
-        year: 2022,
+        year: '2022',
         slug: 'kinnegad-play-therapy',
         link: 'https://kinnegadplaytherapy.ie',
         headerImage: kinnegad1,
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     {
         title: 'Playlist Ninja',
         subtitle: 'Web Design and Development',
-        year: 2019,
+        year: '2019',
         slug: 'playlist-ninja',
         link: 'https://playlistninja.app',
         headerImage: playlist1,

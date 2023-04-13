@@ -1,5 +1,5 @@
 import React from 'react'
-import { GitHub, Mail, Twitter } from 'react-feather'
+import { GitHub, Mail, PenTool, Twitter } from 'react-feather'
 import { useNavigate } from 'react-router-dom'
 import { Project } from '../../projects'
 
@@ -22,6 +22,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
                         <Mail size={14} strokeWidth={2.5} onClick={() => window.open('mailto:ndoherty.xyz@gmail.com', '_blank')} />
                         <Twitter size={14} strokeWidth={2.5} onClick={() => window.open('https://twitter.com/ndoherty_xyz', '_blank')} />
                         <GitHub size={14} strokeWidth={2.5} onClick={() => window.open('https://github.com/ndoherty-xyz', '_blank')} />
+                        <PenTool size={14} strokeWidth={2.25} onClick={() => window.open('https://mirror.xyz/ndoherty.eth', '_blank')} />
                     </div>
                 </div>
             </div>

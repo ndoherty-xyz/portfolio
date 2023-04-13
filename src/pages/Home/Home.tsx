@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, ArrowRight, GitHub, Mail, Twitter } from 'react-feather';
+import { ArrowLeft, ArrowRight, GitHub, Mail, PenTool, Twitter } from 'react-feather';
 import { useNavigate } from 'react-router-dom';
 
 import { projects } from '../../projects';
@@ -26,6 +26,7 @@ const Home = () => {
             <Mail size={14} strokeWidth={2.5} onClick={() => window.open('mailto:ndoherty.xyz@gmail.com', '_blank')} />
             <Twitter size={14} strokeWidth={2.5} onClick={() => window.open('https://twitter.com/ndoherty_xyz', '_blank')} />
             <GitHub size={14} strokeWidth={2.5} onClick={() => window.open('https://github.com/ndoherty-xyz', '_blank')} />
+            <PenTool size={14} strokeWidth={2.25} onClick={() => window.open('https://mirror.xyz/ndoherty.eth', '_blank')} />
           </div>
       </div>
 
