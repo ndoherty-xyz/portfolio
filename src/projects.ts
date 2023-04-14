@@ -1,5 +1,5 @@
 
-import greenwood1 from './images/greenwood-1.png'
+import greenwood4 from './images/greenwood-4.png'
 import greenwood2 from './images/greenwood-2.png'
 import greenwood3 from './images/greenwood-3.png'
 import kinnegad1 from './images/kinnegad-1.png'
@@ -21,11 +21,11 @@ export interface Project {
 export const projects: Project[] = [
     {
         title: 'Greenwood Labs',
-        subtitle: 'Frontend Engineer & Design Lead',
+        subtitle: 'Frontend Engineer & Designer',
         year: '2022-2023',
         slug: 'greenwood-labs',
         link: 'https://greenwood.finance',
-        headerImage: greenwood1,
+        headerImage: greenwood4,
         content: [{
             src: greenwood2
         },
