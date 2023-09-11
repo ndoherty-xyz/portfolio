@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { GitHub, Mail, PenTool, Twitter } from 'react-feather';
 
-import './Home.scss';
+import './scss/Home.scss';
 
 const Home = () => {
   const [windowHeight, setWindowHeight] = useState<number>(window.innerHeight)
