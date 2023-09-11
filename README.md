@@ -1,3 +1,1 @@
-## My portfolio website
-
-Hosted at https://ndoherty.xyz
+a simple portfolio site hosted at https://ndoherty.xyz
