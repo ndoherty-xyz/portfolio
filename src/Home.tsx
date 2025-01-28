@@ -1,40 +1,50 @@
-import React, { useState } from 'react';
-import { GitHub, Mail, PenTool, Twitter } from 'react-feather';
+import React, { useState } from "react";
+import { GitHub, Mail, PenTool, Twitter } from "react-feather";
 
-import './scss/Home.scss';
+import "./scss/Home.scss";
 
 const Home = () => {
-  const [windowHeight, setWindowHeight] = useState<number>(window.innerHeight)
+  const [windowHeight, setWindowHeight] = useState<number>(window.innerHeight);
 
-  window.addEventListener('resize', () => {
-    setWindowHeight(window.innerHeight)
-  })
+  window.addEventListener("resize", () => {
+    setWindowHeight(window.innerHeight);
+  });
 
   return (
-    <div className='home' style={{ height: windowHeight }}>
-      <div className='home-top'>
+    <div className="home" style={{ height: windowHeight }}>
+      <div className="home-top">
         <div>
+          <span>I'm Nick</span>
+          <span>I'm a fullstack developer with a frontend & design focus.</span>
           <span>
-            I'm Nick
-          </span>
-          <span>
-            Currently a frontend engineer at <a target='_blank' rel="noreferrer" href="https://mirror.xyz">Mirror</a>
-          </span>
-          <span>
-            I also do some freelance web design and development with <a target='_blank' rel="noreferrer" href="https://mirror.xyz">RDD</a>
+            Currently open for freelance projects, get in touch below.
           </span>
         </div>
 
         <div>
-          <Mail size={18} strokeWidth={2.5} onClick={() => window.open('mailto:ndoherty.xyz@gmail.com', '_blank')} />
-          <Twitter size={18} strokeWidth={2.5} onClick={() => window.open('https://twitter.com/ndoherty_xyz', '_blank')} />
-          <GitHub size={18} strokeWidth={2.5} onClick={() => window.open('https://github.com/ndoherty-xyz', '_blank')} />
-          <PenTool size={18} strokeWidth={2.25} onClick={() => window.open('https://nick.mirror.xyz', '_blank')} />
+          <Mail
+            size={18}
+            strokeWidth={2.5}
+            onClick={() =>
+              window.open("mailto:ndoherty.xyz@gmail.com", "_blank")
+            }
+          />
+          <Twitter
+            size={18}
+            strokeWidth={2.5}
+            onClick={() => window.open("https://twitter.com/nd__xyz", "_blank")}
+          />
+          <GitHub
+            size={18}
+            strokeWidth={2.5}
+            onClick={() =>
+              window.open("https://github.com/ndoherty-xyz", "_blank")
+            }
+          />
         </div>
       </div>
-    </div >
-  )
-}
-
+    </div>
+  );
+};
 
 export default Home;
