@@ -65,7 +65,7 @@ export default function Home() {
       <h3>
         <span className="font-bold italic">Links</span>
       </h3>
-      <p className="font-sans">
+      <p className="font-sans mb-[48px]">
         <a
           target="_blank"
           href="/Nick_Doherty_Resume.pdf"
