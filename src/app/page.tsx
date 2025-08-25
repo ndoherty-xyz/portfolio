@@ -6,8 +6,7 @@ export default function Home() {
       </h3>
       <p className="font-sans pl-[24px] md:max-w-[50vw]">
         A product-focused software engineer who ships 0→1. I like cleaning up
-        flows, making things fast, and owning the rough edges (auth, payments,
-        infra).
+        flows, making things fast, and owning the rough edges.
       </p>
       <br />
       <br />
