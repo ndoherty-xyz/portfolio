@@ -5,8 +5,9 @@ export default function Home() {
         I&apos;m <span className="font-bold italic">Nick Doherty</span>
       </h3>
       <p className="font-sans pl-[24px] md:max-w-[50vw]">
-        A product-focused software engineer who ships 0→1. I like cleaning up
-        flows, making things fast, and owning the rough edges.
+        A software engineer who pushes for better product decisions. I&apos;ve
+        worked on small teams where figuring out what to build next was part of
+        the job.
       </p>
       <br />
       <br />
@@ -16,28 +17,46 @@ export default function Home() {
       <br />
       <div className="pl-[24px] md:max-w-[50vw]">
         <p className="font-sans">
-          <span className="font-bold italic">Telescope - Contract</span>
+          <span className="font-bold italic">
+            <a
+              href="https://telescope.fyi"
+              target="_blank"
+              className="underline"
+            >
+              Telescope
+            </a>{" "}
+            - Contract
+          </span>
           <br />
           {
-            "Built the web app MVP solo: subscription-gated product with a curator revenue share, async jobs that keep feeds fresh, and caching that hits ~91% on static assets. Pre-beta with ~2k verified on the waitlist."
-          }
-        </p>
-        <br />
-        <p className="font-sans">
-          <span className="font-bold italic">Fluidkey - Contract</span>
-          <br />
-          {
-            "Ported the web app to one Expo codebase across web/iOS/Android in ~12 weeks. Overhauled auth with device-held keys while keeping existing flows; shipped TestFlight for internal QA."
+            "Sole engineer on a subscription curation platform MVP; over 2,000 waitlist signups pre-launch"
           }
         </p>
         <br />
         <p className="font-sans">
           <span className="font-bold italic">
-            Kiosk (formerly Mirror) - Full Time engineer
+            <a
+              href="https://fluidkey.com"
+              target="_blank"
+              className="underline"
+            >
+              Fluidkey
+            </a>{" "}
+            - Contract
+          </span>
+          <br />
+          {
+            "Ported web app to unified Expo codebase (web/iOS/Android) in 12 weeks"
+          }
+        </p>
+        <br />
+        <p className="font-sans">
+          <span className="font-bold italic">
+            Kiosk (formerly Mirror) - Full Time
             <br />
           </span>
           {
-            "Simplified checkout site-wide and added a multi-currency rewards system; that work powered roughly 1M successful checkouts and >$150k paid out. After that, I built the first Kiosk Farcaster client prototypes."
+            "Built checkout system powering over 1M successful checkouts and over $150k distributed in rewards"
           }
         </p>
       </div>
@@ -48,8 +67,8 @@ export default function Home() {
         <span className="font-bold italic">Now</span>
       </h3>
       <p className="font-sans">
-        Open to mid/senior FE or full-stack roles. Denver-based. Studio/contract
-        work lives at{" "}
+        Open to senior FE or full-stack roles on small teams with high
+        ownership. Denver-based. Contract work at{" "}
         <a
           target="_blank"
           href="https://switchback.works"
@@ -75,7 +94,7 @@ export default function Home() {
         •{" "}
         <a
           target="_blank"
-          href="mailto:ndoherty.xyz@gmail.com"
+          href="mailto:nicholasmdoherty@gmail.com"
           className="underline"
         >
           Email
