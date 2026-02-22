@@ -55,7 +55,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${hostGrotesk.className} antialiased no-scrollbar`}>
-        {children}
+        <div className="max-w-5xl mx-auto px-6 sm:px-12 md:px-24">
+          {children}
+        </div>
       </body>
     </html>
   );
