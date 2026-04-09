@@ -10,6 +10,7 @@ interface ProjectCardProps {
   imageWidth?: number;
   imageHeight?: number;
   enforceAspectRatio?: boolean;
+  className?: string;
 }
 
 export function ProjectCard({
@@ -22,9 +23,10 @@ export function ProjectCard({
   imageWidth,
   imageHeight,
   enforceAspectRatio = true,
+  className,
 }: ProjectCardProps) {
   return (
-    <div>
+    <div className={className}>
       {imageSrc ? (
         href ? (
           <a href={href} target="_blank" className="block rounded-xl overflow-hidden border border-foreground/10 mb-4">
@@ -51,7 +53,7 @@ export function ProjectCard({
         <div className="rounded-xl border border-foreground/10 mb-4 aspect-video bg-foreground/5" />
       )}
       <p className="font-sans">
-        <span className="font-bold italic">
+        <span className="font-bold">
           {href ? (
             <a href={href} target="_blank" className="underline">
               {title}

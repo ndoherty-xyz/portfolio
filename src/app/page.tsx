@@ -8,7 +8,7 @@ export default function Home() {
         I&apos;m <span className="font-bold italic">Nick Doherty</span>
       </h3>
       <p className="font-sans pl-[24px] md:max-w-[50vw]">
-        I&apos;ve been sole/early engineer at multiple companies and have both design and engineering experience.
+        Co-founder at Telescope. BS in Computer Science + Design from Northeastern. I&apos;ve been sole or early engineer at multiple startups owning products end-to-end.
       </p>
 
       <br />
@@ -19,6 +19,14 @@ export default function Home() {
       </h3>
       <br />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <ProjectCard
+          className="md:col-span-2"
+          title="Telescope"
+          href="https://telescope.fyi"
+          imageSrc="/images/telescope.png"
+          enforceAspectRatio={false}
+          description="Co-founded a subscription-based curation platform for curators and tastemakers. Own all product engineering, drove a subscription model pivot, built hybrid search (OpenAI embeddings + pgvector), and currently focused on travel curator acquisition. 2,500+ waitlist signups, 500+ account signups"
+        />
         <ProjectCard
           enforceAspectRatio={false}
           title="plinq"
@@ -45,12 +53,6 @@ export default function Home() {
       </h3>
       <br />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <ProjectCard
-          title="Telescope"
-          href="https://telescope.fyi"
-          imageSrc="https://cdn.telescope.fyi/metadata/telescope-og.jpg"
-          description="Built a subscription curation platform end-to-end as sole engineer; 2,500+ waitlist signups, now in a private beta"
-        />
         <ProjectCard
           title="Fluidkey"
           href="https://fluidkey.com"
