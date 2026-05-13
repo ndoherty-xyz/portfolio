@@ -6,14 +6,13 @@ interface RepoLinkProps {
 
 export function RepoLink({ title, href, description }: RepoLinkProps) {
   return (
-    <p className="font-sans">
-      <span className="font-bold italic">
-        <a href={href} target="_blank" className="underline">
+    <a href={href} target="_blank" className="group">
+      <div className="flex flex-row gap-2 items-baseline">
+        <h3 className="font-serif text-md group-hover:underline tracking-tighter">
           {title}
-        </a>
-      </span>
-      {" - "}
-      {description}
-    </p>
+        </h3>
+        <p className="text-sm text-foreground-secondary tracking-tight">{description}</p>
+      </div>
+    </a>
   );
 }

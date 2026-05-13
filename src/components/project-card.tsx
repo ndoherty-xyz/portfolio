@@ -26,10 +26,10 @@ export function ProjectCard({
   className,
 }: ProjectCardProps) {
   return (
-    <div className={className}>
+    <div className={`${className} group`}>
       {imageSrc ? (
         href ? (
-          <a href={href} target="_blank" className="block rounded-xl overflow-hidden border border-foreground/10 mb-4">
+          <a href={href} target="_blank" className="block rounded-sm shadow-md transition-all overflow-hidden mb-3">
             <Image
               src={imageSrc}
               alt={imageAlt ?? title}
@@ -39,7 +39,7 @@ export function ProjectCard({
             />
           </a>
         ) : (
-          <div className="rounded-xl overflow-hidden border border-foreground/10 mb-4">
+          <div className="rounded-sm shadow-sm transition-all overflow-hidden mb-4">
             <Image
               src={imageSrc}
               alt={imageAlt ?? title}
@@ -50,12 +50,12 @@ export function ProjectCard({
           </div>
         )
       ) : (
-        <div className="rounded-xl border border-foreground/10 mb-4 aspect-video bg-foreground/5" />
+        <div className="rounded-sm shadow-sm transition-all mb-4 aspect-video bg-foreground/5" />
       )}
-      <p className="font-sans">
-        <span className="font-bold">
+      <div className="flex flex-col">
+        <span className="font-serif tracking-tight text-lg font-med">
           {href ? (
-            <a href={href} target="_blank" className="underline">
+            <a href={href} target="_blank" className="group-hover:underline">
               {title}
             </a>
           ) : (
@@ -63,9 +63,10 @@ export function ProjectCard({
           )}
           {label && ` - ${label}`}
         </span>
-        <br />
-        {description}
-      </p>
+        <p className="tracking-tight text-foreground-secondary text-sm">
+          {description}
+        </p>
+      </div>
     </div>
   );
 }

@@ -1,11 +1,17 @@
 import type { Viewport, Metadata } from "next";
-import { Host_Grotesk } from "next/font/google";
+import { Host_Grotesk, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const hostGrotesk = Host_Grotesk({
   variable: "--font-grotesk",
   subsets: ["latin"],
 });
+
+const playfair = Playfair_Display({
+  variable: "--font-serif",
+  subsets: ["latin"],
+});
+
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -54,7 +60,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${hostGrotesk.className} antialiased no-scrollbar`}>
+      <body className={`${hostGrotesk.className} ${playfair.variable} antialiased no-scrollbar`}>
         <div className="max-w-5xl mx-auto px-6 sm:px-12 md:px-24">
           {children}
         </div>
