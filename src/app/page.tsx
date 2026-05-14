@@ -33,9 +33,9 @@ export default function Home() {
             className="md:col-span-2"
             title="Telescope"
             href="https://telescope.fyi"
-            imageSrc="/images/telescope.png"
+            imageSrc="/images/telescope-portfolio.webp"
             enforceAspectRatio={false}
-            description="Co-founded a subscription-based curation platform for curators and tastemakers. Own all product engineering, drove a subscription model pivot, built hybrid search (OpenAI embeddings + pgvector), and currently focused on travel curator acquisition. 2,500+ waitlist signups, 500+ account signups"
+            description="Co-founded Telescope, a member-funded network for people with taste. Discovery without algorithms. Places, products, and things to read, recommended by others in the network. I own all product engineering and built the platform end-to-end. Currently focused on bringing more curators in."
           />
           <ProjectCard
             enforceAspectRatio={false}
